@@ -1,21 +1,35 @@
-import type { Preview } from '@storybook/react-vite'
+import React from 'react'
+import type { Preview, Decorator } from '@storybook/react'
+import { ThemeProvider, type ProductTheme } from '../src/themes/ThemeProvider'
+
+const PRODUCTS: ProductTheme[] = ['doc-central', 'nav-central', 'draft-central', 'agent-central']
+
+const withTheme: Decorator = (Story, context) => {
+  const product = (context.globals.theme as ProductTheme) ?? 'doc-central'
+  return (
+    <ThemeProvider product={product}>
+      <Story />
+    </ThemeProvider>
+  )
+}
 
 const preview: Preview = {
-  parameters: {
-    controls: {
-      matchers: {
-       color: /(background|color)$/i,
-       date: /Date$/i,
+  decorators: [withTheme],
+  globalTypes: {
+    theme: {
+      description: 'Product theme',
+      defaultValue: 'doc-central',
+      toolbar: {
+        title: 'Theme',
+        icon: 'paintbrush',
+        items: PRODUCTS.map((p) => ({ value: p, title: p })),
+        dynamicTitle: true,
       },
     },
-
-    a11y: {
-      // 'todo' - show a11y violations in the test UI only
-      // 'error' - fail CI on a11y violations
-      // 'off' - skip a11y checks entirely
-      test: 'todo'
-    }
   },
-};
+  parameters: {
+    controls: { matchers: { color: /(background|color)$/i, date: /Date$/i } },
+  },
+}
 
-export default preview;
+export default preview
