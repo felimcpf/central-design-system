@@ -1,0 +1,35 @@
+:root {
+  --spacing-1: 4px;
+  --spacing-2: 8px;
+  --spacing-3: 12px;
+  --spacing-4: 16px;
+  --spacing-5: 20px;
+  --spacing-6: 24px;
+  --spacing-8: 32px;
+  --spacing-10: 40px;
+  --spacing-12: 48px;
+  --spacing-16: 64px;
+  --typography-fontFamily-sans: Inter, system-ui, sans-serif;
+  --typography-fontFamily-mono: JetBrains Mono, monospace;
+  --typography-fontSize-xs: 12px;
+  --typography-fontSize-sm: 14px;
+  --typography-fontSize-base: 16px;
+  --typography-fontSize-lg: 18px;
+  --typography-fontSize-xl: 20px;
+  --typography-fontSize-2xl: 24px;
+  --typography-fontSize-3xl: 30px;
+  --typography-fontSize-4xl: 36px;
+  --typography-fontWeight-regular: 400;
+  --typography-fontWeight-medium: 500;
+  --typography-fontWeight-semibold: 600;
+  --typography-fontWeight-bold: 700;
+  --typography-lineHeight-tight: 1.25;
+  --typography-lineHeight-normal: 1.5;
+  --typography-lineHeight-relaxed: 1.75;
+  --borderRadius-none: 0px;
+  --borderRadius-sm: 4px;
+  --borderRadius-md: 8px;
+  --borderRadius-lg: 12px;
+  --borderRadius-xl: 16px;
+  --borderRadius-full: 9999px;
+}
