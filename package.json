@@ -11,7 +11,9 @@
     "storybook": "storybook dev -p 6006",
     "build-storybook": "storybook build",
     "test": "vitest run",
-    "test:watch": "vitest"
+    "test:watch": "vitest",
+    "generate-themes": "node scripts/generate-themes.js",
+    "sync-figma": "node scripts/sync-figma.js"
   },
   "dependencies": {
     "react": "^19.2.4",
