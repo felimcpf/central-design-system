@@ -1,0 +1,219 @@
+/* Button component — matches Figma frame 4:10326 */
+
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  min-width: 62px;
+  border-radius: 8px;
+  font-family: Lato, 'Helvetica Neue', Arial, sans-serif;
+  font-weight: 700;
+  letter-spacing: 0;
+  cursor: pointer;
+  border: 1px solid transparent;
+  transition: background-color 0.15s ease, color 0.15s ease, border-color 0.15s ease;
+  white-space: nowrap;
+  text-decoration: none;
+  box-sizing: border-box;
+}
+
+.btn:focus-visible {
+  outline: 2px solid var(--color-primary-700);
+  outline-offset: 2px;
+}
+
+/* ── Sizes ─────────────────────────────────────────────────── */
+
+.btn--lg {
+  height: 48px;
+  padding: 0 16px;
+  font-size: 14px;
+  line-height: 16.8px;
+}
+
+.btn--md {
+  height: 36px;
+  padding: 0 12px;
+  font-size: 14px;
+  line-height: 16.8px;
+}
+
+.btn--sm {
+  height: 24px;
+  padding: 0 12px;
+  font-size: 12px;
+  line-height: 14.4px;
+}
+
+/* ── Icon sizes ─────────────────────────────────────────────── */
+
+.btn--lg .btn__icon { width: 20px; height: 20px; }
+.btn--md .btn__icon { width: 16px; height: 16px; }
+.btn--sm .btn__icon { width: 12px; height: 12px; }
+
+.btn__icon {
+  display: block;
+  flex-shrink: 0;
+}
+
+/* ── Solid Primary ──────────────────────────────────────────── */
+
+.btn--solid-primary {
+  background-color: var(--color-primary-700);
+  color: var(--color-neutral-50);
+}
+.btn--solid-primary:hover:not(:disabled) { background-color: var(--color-primary-800); }
+.btn--solid-primary:active:not(:disabled) { background-color: var(--color-primary-900); }
+
+/* ── Outline Primary ────────────────────────────────────────── */
+
+.btn--outline-primary {
+  background-color: var(--color-neutral-50);
+  color: var(--color-primary-700);
+  border-color: var(--color-primary-700);
+}
+.btn--outline-primary:hover:not(:disabled) {
+  background-color: var(--color-primary-50);
+  border-color: var(--color-primary-800);
+  color: var(--color-primary-800);
+}
+.btn--outline-primary:active:not(:disabled) {
+  background-color: var(--color-primary-100);
+  border-color: var(--color-primary-900);
+  color: var(--color-primary-900);
+}
+
+/* ── Clear Primary ──────────────────────────────────────────── */
+
+.btn--clear-primary {
+  background-color: transparent;
+  color: var(--color-primary-700);
+}
+.btn--clear-primary:hover:not(:disabled) { background-color: var(--color-primary-50); }
+.btn--clear-primary:active:not(:disabled) { background-color: var(--color-primary-100); }
+
+/* ── Solid Warning (uses error scale) ───────────────────────── */
+
+.btn--solid-warning {
+  background-color: var(--color-error-700);
+  color: var(--color-neutral-50);
+}
+.btn--solid-warning:hover:not(:disabled) { background-color: var(--color-error-800); }
+.btn--solid-warning:active:not(:disabled) { background-color: var(--color-error-900); }
+
+/* ── Outline Warning ────────────────────────────────────────── */
+
+.btn--outline-warning {
+  background-color: var(--color-neutral-50);
+  color: var(--color-error-700);
+  border-color: var(--color-error-700);
+}
+.btn--outline-warning:hover:not(:disabled) {
+  background-color: var(--color-error-50);
+  border-color: var(--color-error-800);
+  color: var(--color-error-800);
+}
+.btn--outline-warning:active:not(:disabled) {
+  background-color: var(--color-error-100);
+  border-color: var(--color-error-900);
+  color: var(--color-error-900);
+}
+
+/* ── Clear Warning ──────────────────────────────────────────── */
+
+.btn--clear-warning {
+  background-color: transparent;
+  color: var(--color-error-700);
+}
+.btn--clear-warning:hover:not(:disabled) { background-color: var(--color-error-50); }
+.btn--clear-warning:active:not(:disabled) { background-color: var(--color-error-100); }
+
+/* ── Outline Neutral ────────────────────────────────────────── */
+
+.btn--outline-neutral {
+  background-color: var(--color-neutral-50);
+  color: var(--color-neutral-600);
+  border-color: var(--color-neutral-600);
+}
+.btn--outline-neutral:hover:not(:disabled) {
+  background-color: var(--color-neutral-100);
+  border-color: var(--color-neutral-700);
+  color: var(--color-neutral-700);
+}
+.btn--outline-neutral:active:not(:disabled) {
+  background-color: var(--color-neutral-200);
+  border-color: var(--color-neutral-800);
+  color: var(--color-neutral-800);
+}
+
+/* ── Clear Neutral ──────────────────────────────────────────── */
+
+.btn--clear-neutral {
+  background-color: transparent;
+  color: var(--color-neutral-600);
+}
+.btn--clear-neutral:hover:not(:disabled) { background-color: var(--color-neutral-100); }
+.btn--clear-neutral:active:not(:disabled) { background-color: var(--color-neutral-200); }
+
+/* ── Solid Secondary 1 ──────────────────────────────────────── */
+
+.btn--solid-secondary-1 {
+  background-color: var(--color-secondary1-700);
+  color: var(--color-neutral-50);
+}
+.btn--solid-secondary-1:hover:not(:disabled) { background-color: var(--color-secondary1-800); }
+.btn--solid-secondary-1:active:not(:disabled) { background-color: var(--color-secondary1-900); }
+
+/* ── Solid Secondary 2 ──────────────────────────────────────── */
+
+.btn--solid-secondary-2 {
+  background-color: var(--color-secondary2-700);
+  color: var(--color-neutral-50);
+}
+.btn--solid-secondary-2:hover:not(:disabled) { background-color: var(--color-secondary2-800); }
+.btn--solid-secondary-2:active:not(:disabled) { background-color: var(--color-secondary2-900); }
+
+/* ── Solid Neutral ──────────────────────────────────────────── */
+
+.btn--solid-neutral {
+  background-color: var(--color-neutral-600);
+  color: var(--color-neutral-50);
+}
+.btn--solid-neutral:hover:not(:disabled) { background-color: var(--color-neutral-700); }
+.btn--solid-neutral:active:not(:disabled) { background-color: var(--color-neutral-800); }
+
+/* ── Disabled state ─────────────────────────────────────────── */
+
+.btn:disabled {
+  cursor: not-allowed;
+}
+
+/* Solid + Neutral disabled: grey fill */
+.btn--solid-primary:disabled,
+.btn--solid-warning:disabled,
+.btn--solid-secondary-1:disabled,
+.btn--solid-secondary-2:disabled,
+.btn--solid-neutral:disabled {
+  background-color: var(--color-neutral-200);
+  color: var(--color-neutral-400);
+  border-color: transparent;
+}
+
+/* Outline disabled: light bg + grey border */
+.btn--outline-primary:disabled,
+.btn--outline-warning:disabled,
+.btn--outline-neutral:disabled {
+  background-color: var(--color-neutral-50);
+  border-color: var(--color-neutral-300);
+  color: var(--color-neutral-400);
+}
+
+/* Clear disabled: transparent, muted text */
+.btn--clear-primary:disabled,
+.btn--clear-warning:disabled,
+.btn--clear-neutral:disabled {
+  background-color: transparent;
+  border-color: transparent;
+  color: var(--color-neutral-400);
+}

@@ -9,7 +9,7 @@
   --spacing-10: 40px;
   --spacing-12: 48px;
   --spacing-16: 64px;
-  --typography-fontFamily-sans: Inter, system-ui, sans-serif;
+  --typography-fontFamily-sans: Lato, system-ui, sans-serif;
   --typography-fontFamily-mono: JetBrains Mono, monospace;
   --typography-fontSize-xs: 12px;
   --typography-fontSize-sm: 14px;
@@ -32,4 +32,10 @@
   --borderRadius-lg: 12px;
   --borderRadius-xl: 16px;
   --borderRadius-full: 9999px;
+}
+
+/* Apply font-family from token to all themed elements and their children */
+[data-theme],
+[data-theme] * {
+  font-family: var(--typography-fontFamily-sans);
 }

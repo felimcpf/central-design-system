@@ -1,0 +1,131 @@
+.stepper {
+  display: flex;
+}
+
+.stepper--horizontal {
+  flex-direction: row;
+  align-items: flex-start;
+}
+
+.stepper--vertical {
+  flex-direction: column;
+}
+
+.stepper__step {
+  display: flex;
+  flex: 1;
+  position: relative;
+}
+
+.stepper--horizontal .stepper__step {
+  flex-direction: column;
+  align-items: center;
+}
+
+.stepper--vertical .stepper__step {
+  flex-direction: row;
+  align-items: flex-start;
+  gap: 12px;
+  flex: none;
+  padding-bottom: 24px;
+}
+
+.stepper--vertical .stepper__step:last-child {
+  padding-bottom: 0;
+}
+
+/* Indicator row (circle + line) */
+.stepper__indicator-row {
+  display: flex;
+  align-items: center;
+}
+
+.stepper--horizontal .stepper__indicator-row {
+  flex-direction: row;
+  width: 100%;
+}
+
+.stepper--vertical .stepper__indicator-row {
+  flex-direction: column;
+  align-items: center;
+}
+
+.stepper__circle {
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 12px;
+  font-weight: 600;
+  flex-shrink: 0;
+  transition: background-color 0.2s, border-color 0.2s;
+}
+
+.stepper__step--complete .stepper__circle {
+  background: var(--color-primary-600, #3F78C7);
+  color: #ffffff;
+}
+
+.stepper__step--active .stepper__circle {
+  background: #ffffff;
+  border: 2px solid var(--color-primary-600, #3F78C7);
+  color: var(--color-primary-600, #3F78C7);
+}
+
+.stepper__step--inactive .stepper__circle {
+  background: #ffffff;
+  border: 2px solid var(--color-neutral-300, #D9D9D9);
+  color: var(--color-neutral-500, #A0A0A0);
+}
+
+.stepper__line {
+  flex: 1;
+  height: 2px;
+  background: var(--color-neutral-200, #EBEBEB);
+  transition: background-color 0.2s;
+}
+
+.stepper--vertical .stepper__line {
+  width: 2px;
+  height: 20px;
+  flex: none;
+  margin: 4px 0;
+}
+
+.stepper__line--complete {
+  background: var(--color-primary-600, #3F78C7);
+}
+
+.stepper__content {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  padding-top: 8px;
+}
+
+.stepper--horizontal .stepper__content {
+  align-items: center;
+  text-align: center;
+}
+
+.stepper--vertical .stepper__content {
+  padding-top: 4px;
+}
+
+.stepper__label {
+  font-size: 13px;
+  font-weight: 500;
+  color: var(--color-neutral-900, #383838);
+}
+
+.stepper__step--inactive .stepper__label {
+  color: var(--color-neutral-500, #A0A0A0);
+}
+
+.stepper__description {
+  font-size: 12px;
+  color: var(--color-neutral-500, #A0A0A0);
+  line-height: 1.4;
+}

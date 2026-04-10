@@ -1,0 +1,73 @@
+.tag {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  border-radius: 4px;
+  background-color: var(--color-primary-100, #CDD5F9);
+  color: var(--color-primary-900, #141E52);
+  font-weight: 500;
+  user-select: none;
+  transition: background-color 0.15s;
+}
+
+/* Sizes */
+.tag--lg {
+  height: 28px;
+  padding: 0 8px;
+  font-size: 14px;
+}
+
+.tag--md {
+  height: 24px;
+  padding: 0 6px;
+  font-size: 13px;
+}
+
+.tag--sm {
+  height: 20px;
+  padding: 0 6px;
+  font-size: 12px;
+}
+
+/* States */
+.tag--hover {
+  background-color: var(--color-primary-200, #B3BDF1);
+  cursor: pointer;
+}
+
+.tag--pressed {
+  background-color: var(--color-primary-300, #8394EC);
+  color: #ffffff;
+}
+
+.tag--disabled {
+  background-color: var(--color-neutral-200, #EBEBEB);
+  color: var(--color-neutral-500, #A0A0A0);
+  cursor: not-allowed;
+}
+
+.tag__icon {
+  display: inline-flex;
+  align-items: center;
+  opacity: 0.8;
+}
+
+.tag__label {
+  line-height: 1;
+}
+
+.tag__close {
+  display: inline-flex;
+  align-items: center;
+  background: none;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+  color: inherit;
+  opacity: 0.7;
+  margin-left: 2px;
+}
+
+.tag__close:hover {
+  opacity: 1;
+}

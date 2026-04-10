@@ -13,7 +13,7 @@
     "test": "vitest run",
     "test:watch": "vitest",
     "generate-themes": "node scripts/generate-themes.js",
-    "sync-figma": "node scripts/sync-figma.js"
+    "sync-figma": "node --env-file=.env scripts/sync-figma.js"
   },
   "dependencies": {
     "react": "^19.2.4",
