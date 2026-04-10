@@ -27,12 +27,14 @@ function ArrowIcon({ size }: { size: number }) {
 const linkIconSize: Record<LinkButtonSize, number> = { lg: 16, md: 14, sm: 12 }
 
 export function LinkButton({ label, size = 'md', styleVariant = 'primary', withIcon = false, state = 'default', href, onClick }: LinkButtonProps) {
+  const isDisabled = state === 'disabled'
+  const forcedClass = state !== 'default' && state !== 'disabled' ? `link-btn--${state}` : ''
   return (
     <a
-      className={`link-btn link-btn--${size} link-btn--${styleVariant} link-btn--${state}`}
+      className={['link-btn', `link-btn--${size}`, `link-btn--${styleVariant}`, forcedClass, isDisabled ? 'link-btn--disabled' : ''].filter(Boolean).join(' ')}
       href={href || '#'}
-      aria-disabled={state === 'disabled'}
-      onClick={(e) => { e.preventDefault(); if (state !== 'disabled') onClick?.() }}
+      aria-disabled={isDisabled}
+      onClick={(e) => { e.preventDefault(); if (!isDisabled) onClick?.() }}
     >
       {label}
       {withIcon && <ArrowIcon size={linkIconSize[size]} />}
@@ -57,10 +59,13 @@ export interface IconButtonProps {
 }
 
 export function IconButton({ icon, label, size = 'md', styleVariant = 'solid-primary', state = 'default', onClick }: IconButtonProps) {
+  const isDisabled = state === 'disabled'
+  // Only add the state class for forced docs states (hover/pressed); real :hover/:active come from CSS
+  const forcedClass = state !== 'default' && state !== 'disabled' ? `icon-btn--${state}` : ''
   return (
     <button
-      className={`icon-btn icon-btn--${size} icon-btn--${styleVariant} icon-btn--${state}`}
-      disabled={state === 'disabled'}
+      className={['icon-btn', `icon-btn--${size}`, `icon-btn--${styleVariant}`, forcedClass].filter(Boolean).join(' ')}
+      disabled={isDisabled}
       onClick={onClick}
       aria-label={label}
       title={label}
