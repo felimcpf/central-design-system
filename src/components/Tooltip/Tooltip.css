@@ -1,0 +1,107 @@
+.tooltip-wrapper {
+  position: relative;
+  display: inline-flex;
+}
+
+.tooltip {
+  position: absolute;
+  z-index: 100;
+  display: flex;
+  align-items: center;
+  pointer-events: none;
+  white-space: nowrap;
+}
+
+.tooltip__content {
+  background: var(--color-primary-100, #EDF0FD);
+  color: var(--color-primary-900, #141E52);
+  font-size: 12px;
+  font-weight: 500;
+  padding: 4px 8px;
+  border-radius: 4px;
+  line-height: 1.4;
+  max-width: 200px;
+  white-space: normal;
+}
+
+.tooltip__arrow {
+  width: 0;
+  height: 0;
+  flex-shrink: 0;
+}
+
+/* Up: arrow points up from bottom of tooltip, shown above the element */
+.tooltip--up {
+  bottom: calc(100% + 8px);
+  left: 50%;
+  transform: translateX(-50%);
+  flex-direction: column;
+}
+
+.tooltip--up .tooltip__arrow {
+  order: 2;
+  border-left: 5px solid transparent;
+  border-right: 5px solid transparent;
+  border-top: 5px solid var(--color-primary-100, #EDF0FD);
+}
+
+.tooltip--up .tooltip__content {
+  order: 1;
+}
+
+/* Down: shown below element */
+.tooltip--down {
+  top: calc(100% + 8px);
+  left: 50%;
+  transform: translateX(-50%);
+  flex-direction: column;
+}
+
+.tooltip--down .tooltip__arrow {
+  order: 1;
+  border-left: 5px solid transparent;
+  border-right: 5px solid transparent;
+  border-bottom: 5px solid var(--color-primary-100, #EDF0FD);
+}
+
+.tooltip--down .tooltip__content {
+  order: 2;
+}
+
+/* Left: shown to the left */
+.tooltip--left {
+  right: calc(100% + 8px);
+  top: 50%;
+  transform: translateY(-50%);
+  flex-direction: row;
+}
+
+.tooltip--left .tooltip__arrow {
+  order: 2;
+  border-top: 5px solid transparent;
+  border-bottom: 5px solid transparent;
+  border-left: 5px solid var(--color-primary-100, #EDF0FD);
+}
+
+.tooltip--left .tooltip__content {
+  order: 1;
+}
+
+/* Right: shown to the right */
+.tooltip--right {
+  left: calc(100% + 8px);
+  top: 50%;
+  transform: translateY(-50%);
+  flex-direction: row;
+}
+
+.tooltip--right .tooltip__arrow {
+  order: 1;
+  border-top: 5px solid transparent;
+  border-bottom: 5px solid transparent;
+  border-right: 5px solid var(--color-primary-100, #EDF0FD);
+}
+
+.tooltip--right .tooltip__content {
+  order: 2;
+}

@@ -1,0 +1,94 @@
+.typography {
+  margin: 0;
+  color: var(--color-neutral-900, #383838);
+  font-family: inherit;
+}
+
+/* Display */
+.typography--display-lg {
+  font-size: 48px;
+  font-weight: 700;
+  line-height: 1.1;
+  letter-spacing: -0.02em;
+}
+
+.typography--display-md {
+  font-size: 36px;
+  font-weight: 700;
+  line-height: 1.15;
+  letter-spacing: -0.015em;
+}
+
+.typography--display-sm {
+  font-size: 30px;
+  font-weight: 600;
+  line-height: 1.2;
+  letter-spacing: -0.01em;
+}
+
+/* Headings */
+.typography--heading-lg {
+  font-size: 24px;
+  font-weight: 600;
+  line-height: 1.3;
+}
+
+.typography--heading-md {
+  font-size: 20px;
+  font-weight: 600;
+  line-height: 1.3;
+}
+
+.typography--heading-sm {
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 1.4;
+}
+
+/* Body */
+.typography--body-lg {
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 1.6;
+}
+
+.typography--body-md {
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 1.6;
+}
+
+.typography--body-sm {
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 1.5;
+}
+
+/* Labels */
+.typography--label-lg {
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 1.4;
+}
+
+.typography--label-md {
+  font-size: 12px;
+  font-weight: 500;
+  line-height: 1.4;
+}
+
+.typography--label-sm {
+  font-size: 11px;
+  font-weight: 500;
+  line-height: 1.4;
+  letter-spacing: 0.02em;
+  text-transform: uppercase;
+}
+
+/* Caption */
+.typography--caption {
+  font-size: 11px;
+  font-weight: 400;
+  line-height: 1.4;
+  color: var(--color-neutral-600, #858585);
+}

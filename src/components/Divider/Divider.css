@@ -1,0 +1,16 @@
+.divider {
+  border: none;
+  border-top: 1px solid #EBEBEB;
+  margin: 0;
+  width: 100%;
+}
+
+.divider--round {
+  border-top-style: solid;
+  border-radius: 999px;
+}
+
+.divider--square {
+  border-top-style: solid;
+  border-radius: 0;
+}
