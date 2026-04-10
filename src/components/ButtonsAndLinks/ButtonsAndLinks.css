@@ -3,7 +3,7 @@
   display: inline-flex;
   align-items: center;
   gap: 4px;
-  text-decoration: underline;
+  text-decoration: none;
   text-underline-offset: 2px;
   font-family: inherit;
   font-weight: 400;
@@ -13,6 +13,13 @@
   background: none;
   padding: 0;
   line-height: 1.4;
+}
+
+.link-btn:hover,
+.link-btn:active,
+.link-btn.link-btn--hover,
+.link-btn.link-btn--pressed {
+  text-decoration: underline;
 }
 
 .link-btn--lg { font-size: 16px; }
