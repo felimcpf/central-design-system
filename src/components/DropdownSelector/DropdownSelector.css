@@ -1,0 +1,208 @@
+.ds {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  width: 100%;
+}
+
+/* Label */
+.ds__label {
+  font-size: 14px;
+  font-weight: 400;
+  color: var(--color-neutral-950, #262626);
+  line-height: 1.2;
+}
+
+/* Trigger */
+.ds__trigger {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
+  width: 100%;
+  min-height: 48px;
+  padding: 0 16px;
+  background: var(--color-neutral-50, #ffffff);
+  border: 1px solid var(--color-neutral-300, #D9D9D9);
+  border-radius: 8px;
+  font-family: inherit;
+  font-size: 14px;
+  font-weight: 400;
+  color: var(--color-neutral-950, #262626);
+  cursor: pointer;
+  transition: border-color 0.15s, box-shadow 0.15s;
+  text-align: left;
+}
+
+.ds__trigger:hover {
+  border-color: var(--color-neutral-400, #BCBCBC);
+}
+
+.ds__trigger--open,
+.ds--active .ds__trigger {
+  border-color: var(--color-primary-500, #5B8ED6);
+  box-shadow: 0 0 0 2px rgba(91, 142, 214, 0.15);
+}
+
+.ds__trigger svg {
+  flex-shrink: 0;
+  color: var(--color-neutral-600, #858585);
+  transition: transform 0.2s;
+}
+
+.ds__trigger--open svg {
+  transform: rotate(180deg);
+}
+
+.ds--disabled .ds__trigger {
+  background: var(--color-neutral-100, #F9F9F9);
+  border-color: var(--color-neutral-300, #D9D9D9);
+  color: var(--color-neutral-400, #BCBCBC);
+  cursor: not-allowed;
+}
+
+/* Tags input */
+.ds__trigger--tags {
+  min-height: 48px;
+  height: auto;
+  padding: 8px 16px;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  gap: 6px;
+}
+
+.ds__tags-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  flex: 1;
+}
+
+/* Avatar value */
+.ds__avatar-value {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  flex: 1;
+}
+
+/* Placeholder */
+.ds__placeholder {
+  color: var(--color-neutral-600, #858585);
+  flex: 1;
+}
+
+.ds__value {
+  flex: 1;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+/* Tags */
+.ds-tag {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  padding: 2px 8px;
+  background: var(--color-primary-100, #D6E5F9);
+  color: var(--color-primary-700, #2A52A0);
+  border-radius: 4px;
+  font-size: 12px;
+  font-weight: 500;
+  white-space: nowrap;
+}
+
+.ds-tag__remove {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: inherit;
+  padding: 0;
+  opacity: 0.7;
+  transition: opacity 0.12s;
+}
+
+.ds-tag__remove:hover { opacity: 1; }
+
+/* Avatar initials */
+.ds-avatar--initials {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--color-primary-200, #B0CCF3);
+  color: var(--color-primary-700, #2A52A0);
+  border-radius: 50%;
+  font-weight: 600;
+  flex-shrink: 0;
+}
+
+/* Panel */
+.ds__panel {
+  position: absolute;
+  top: calc(100% + 4px);
+  left: 0;
+  right: 0;
+  background: #fff;
+  border: 1px solid var(--color-neutral-200, #EBEBEB);
+  border-radius: 8px;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.10);
+  z-index: 200;
+  padding: 4px;
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  max-height: 240px;
+  overflow-y: auto;
+}
+
+.ds {
+  position: relative;
+}
+
+/* Options */
+.ds__option {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  width: 100%;
+  text-align: left;
+  padding: 10px 12px;
+  background: none;
+  border: none;
+  border-radius: 6px;
+  font-family: inherit;
+  font-size: 14px;
+  font-weight: 400;
+  color: var(--color-neutral-950, #262626);
+  cursor: pointer;
+  transition: background 0.12s;
+}
+
+.ds__option:hover { background: var(--color-neutral-100, #F9F9F9); }
+
+.ds__option--selected {
+  background: var(--color-primary-50, #EBF2FC);
+  color: var(--color-primary-600, #3B6EBB);
+  font-weight: 500;
+}
+
+.ds__option--selected:hover { background: var(--color-primary-100, #D6E5F9); }
+
+.ds__check {
+  margin-left: auto;
+  color: var(--color-primary-500, #5B8ED6);
+  flex-shrink: 0;
+}
+
+/* Caption */
+.ds__caption {
+  font-size: 12px;
+  font-weight: 400;
+  color: var(--color-neutral-600, #858585);
+  margin: 0;
+  line-height: 1.4;
+}
