@@ -1,48 +1,62 @@
 import type { Meta, StoryObj } from '@storybook/react'
 import { GlobalNavigation } from './GlobalNavigation'
-import { Avatar } from '../Avatar/Avatar'
-import { SearchBar } from '../SearchBar/SearchBar'
 
 const meta: Meta<typeof GlobalNavigation> = {
   title: 'Organisms/GlobalNavigation',
   component: GlobalNavigation,
   parameters: { layout: 'fullscreen' },
+  argTypes: {
+    variant: {
+      control: 'select',
+      options: ['search', 'search-bell', 'links', 'mobile'],
+    },
+  },
 }
 export default meta
 
 type Story = StoryObj<typeof GlobalNavigation>
 
-const navItems = [
-  { label: 'Dashboard', href: '/', active: true },
-  { label: 'Documents', href: '/docs' },
-  { label: 'Reports', href: '/reports' },
-  { label: 'Team', href: '/team' },
-]
-
-export const Default: Story = {
-  args: {
-    productName: 'navCentral',
-    navItems,
-    userAvatar: <Avatar initials="JD" color="orange" size="sm" />,
-  },
-}
-
 export const WithSearch: Story = {
+  name: 'Default — With Search Bar',
   args: {
-    productName: 'docCentral',
-    navItems,
-    actions: (
-      <div style={{ width: 220 }}>
-        <SearchBar placeholder="Search..." size="sm" />
-      </div>
-    ),
-    userAvatar: <Avatar initials="AB" color="green" size="sm" />,
+    variant: 'search',
+    logoSrc: '/logos/navCentral-full-logo.svg',
+    searchPlaceholder: 'Search in navCentral',
+    userInitials: 'WW',
   },
 }
 
-export const Minimal: Story = {
+export const WithSearchAndBell: Story = {
+  name: 'With Bell Icon',
   args: {
-    productName: 'draftCentral',
-    userAvatar: <Avatar initials="CD" color="navy" size="sm" />,
+    variant: 'search-bell',
+    logoSrc: '/logos/navCentral-full-logo.svg',
+    searchPlaceholder: 'Search in navCentral',
+    userInitials: 'WW',
+  },
+}
+
+export const WithLinks: Story = {
+  name: 'With Text Nav Links',
+  args: {
+    variant: 'links',
+    logoSrc: '/logos/docCentral-full-logo.svg',
+    navLinks: [
+      { label: 'Dashboard', href: '/', active: true },
+      { label: 'Guide', href: '/guide' },
+      { label: 'FAQs', href: '/faqs' },
+      { label: 'Download Add-In', href: '/download' },
+    ],
+    userInitials: 'WW',
+  },
+}
+
+export const Mobile: Story = {
+  name: 'Mobile',
+  args: {
+    variant: 'mobile',
+    logoIconSrc: '/logos/navCentral-icon.svg',
+    searchPlaceholder: 'Search in navCentral',
+    userInitials: 'WW',
   },
 }

@@ -73,3 +73,435 @@
   gap: 8px;
   flex-shrink: 0;
 }
+
+/* ── Figma variant modals ──────────────────────────────────────────────────── */
+
+/* Shared wrapper for static modal display */
+.modal-static {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 48px;
+  background: var(--color-neutral-100, #f9f9f9);
+  border-radius: 16px;
+  min-height: 300px;
+}
+
+/* ── Modal 1 — Centered Alert ──────────────────────────────────────────────── */
+.m1 {
+  background: #ffffff;
+  border-radius: 8px;
+  box-shadow: 0px 0px 36px 0px rgba(155, 155, 155, 0.29);
+  padding: 24px;
+  width: 511px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 24px;
+  position: relative;
+}
+
+.m1__close {
+  position: absolute;
+  top: 30px;
+  right: 30.5px;
+  width: 20px;
+  height: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: var(--color-neutral-500, #a0a0a0);
+  padding: 0;
+}
+
+.m1__illustration {
+  width: 134px;
+  height: 130px;
+  flex-shrink: 0;
+}
+
+.m1__message {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  align-items: center;
+  text-align: center;
+  width: 100%;
+  color: var(--color-neutral-950, #262626);
+}
+
+.m1__title {
+  font-family: Lato, sans-serif;
+  font-size: 32px;
+  font-weight: 600;
+  line-height: 38.4px;
+  margin: 0;
+  width: 100%;
+}
+
+.m1__body {
+  font-family: Lato, sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 19.2px;
+  margin: 0;
+  width: 100%;
+}
+
+.m1__buttons {
+  display: flex;
+  align-items: center;
+  gap: 25px;
+  width: 100%;
+  justify-content: center;
+}
+
+.m1__btn-cancel {
+  font-family: Lato, sans-serif;
+  font-size: 14px;
+  font-weight: 700;
+  color: #a50d0d;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 16px;
+  height: 48px;
+  border-radius: 8px;
+  line-height: 16.8px;
+}
+
+.m1__btn-accept {
+  font-family: Lato, sans-serif;
+  font-size: 14px;
+  font-weight: 700;
+  color: #ffffff;
+  background: var(--color-primary-700, #203397);
+  border: none;
+  cursor: pointer;
+  padding: 16px;
+  height: 48px;
+  border-radius: 8px;
+  min-width: 62px;
+  line-height: 16.8px;
+}
+
+/* ── Modal 2 — Horizontal Alert ────────────────────────────────────────────── */
+.m2 {
+  background: #ffffff;
+  border-radius: 8px;
+  box-shadow: 0px 0px 36px 0px rgba(155, 155, 155, 0.29);
+  padding: 24px;
+  width: 671px;
+  display: flex;
+  align-items: center;
+  gap: 24px;
+  position: relative;
+}
+
+.m2__close {
+  position: absolute;
+  top: 24px;
+  right: 25px;
+  width: 20px;
+  height: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: var(--color-neutral-500, #a0a0a0);
+  padding: 0;
+}
+
+.m2__illustration {
+  width: 134px;
+  height: 130px;
+  flex-shrink: 0;
+}
+
+.m2__content {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  min-width: 0;
+}
+
+.m2__message {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  color: var(--color-neutral-950, #262626);
+}
+
+.m2__title {
+  font-family: Lato, sans-serif;
+  font-size: 32px;
+  font-weight: 600;
+  line-height: 38.4px;
+  margin: 0;
+}
+
+.m2__body {
+  font-family: Lato, sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 19.2px;
+  margin: 0;
+}
+
+.m2__buttons {
+  display: flex;
+  align-items: center;
+  gap: 25px;
+}
+
+/* ── Modal 3 — Manage Owners ───────────────────────────────────────────────── */
+.m3 {
+  background: #ffffff;
+  border-radius: 8px;
+  box-shadow: 0px 4px 8px 0px rgba(155, 155, 155, 0.16);
+  padding: 48px 128px;
+  width: 942px;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  align-items: flex-end;
+  position: relative;
+  box-sizing: border-box;
+}
+
+.m3__header-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.m3__title {
+  font-family: Lato, sans-serif;
+  font-size: 40px;
+  font-weight: 700;
+  line-height: 48px;
+  color: var(--color-neutral-950, #262626);
+  margin: 0;
+}
+
+.m3__close {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: var(--color-neutral-500, #a0a0a0);
+  padding: 0;
+  flex-shrink: 0;
+}
+
+.m3__subtitle {
+  font-family: Lato, sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 19.2px;
+  color: var(--color-neutral-950, #262626);
+  margin: 0;
+  width: 100%;
+}
+
+.m3__input-row {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  width: 100%;
+}
+
+.m3__text-input {
+  flex: 1;
+  height: 48px;
+  border: 1px solid var(--color-neutral-300, #d9d9d9);
+  border-radius: 8px;
+  padding: 0 16px;
+  font-family: Lato, sans-serif;
+  font-size: 14px;
+  color: var(--color-neutral-600, #858585);
+  background: #ffffff;
+  outline: none;
+  min-width: 0;
+}
+
+.m3__text-input:focus {
+  border-color: var(--color-primary-700, #203397);
+  box-shadow: 0 0 0 2px rgba(32, 51, 151, 0.1);
+}
+
+.m3__add-btn {
+  font-family: Lato, sans-serif;
+  font-size: 14px;
+  font-weight: 700;
+  color: #ffffff;
+  background: var(--color-primary-700, #203397);
+  border: none;
+  cursor: pointer;
+  padding: 16px;
+  height: 48px;
+  border-radius: 8px;
+  white-space: nowrap;
+  flex-shrink: 0;
+  line-height: 16.8px;
+}
+
+.m3__user-list {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+.m3__user-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 12px 0;
+}
+
+.m3__user-left {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.m3__avatar {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  border: 1px solid #ffffff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: Lato, sans-serif;
+  font-size: 10px;
+  color: #ffffff;
+  flex-shrink: 0;
+}
+
+.m3__user-info {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.m3__user-name {
+  font-family: Lato, sans-serif;
+  font-size: 14px;
+  font-weight: 700;
+  color: var(--color-neutral-800, #4f4f4f);
+  line-height: 16.8px;
+  width: 236px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.m3__user-email {
+  font-family: Lato, sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+  color: var(--color-neutral-600, #858585);
+  line-height: 16.8px;
+  width: 236px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.m3__trash-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 24px;
+  height: 24px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: var(--color-neutral-500, #a0a0a0);
+  padding: 0;
+  flex-shrink: 0;
+}
+
+.m3__trash-btn:hover { color: #ef3434; }
+
+.m3__scrollbar {
+  position: absolute;
+  right: 0;
+  top: 0;
+  width: 13px;
+  height: 505px;
+  background: var(--color-neutral-50, #fff);
+  border: 1px solid var(--color-neutral-300, #d9d9d9);
+  border-radius: 0 8px 8px 0;
+  display: flex;
+  justify-content: center;
+  padding: 4px;
+  box-sizing: border-box;
+}
+
+.m3__scrollbar-thumb {
+  position: absolute;
+  top: 199px;
+  left: 3px;
+  width: 5px;
+  height: 150px;
+  background: var(--color-primary-700, #203397);
+  border-radius: 4px;
+}
+
+/* ── Modal 4 — Image Viewer ────────────────────────────────────────────────── */
+.m4 {
+  background: #ffffff;
+  border-radius: 8px;
+  box-shadow: 0px 4px 8px 0px rgba(155, 155, 155, 0.16);
+  padding: 48px 128px;
+  width: 942px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 24px;
+  position: relative;
+  box-sizing: border-box;
+}
+
+.m4__header {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  width: 100%;
+}
+
+.m4__close {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: var(--color-neutral-500, #a0a0a0);
+  padding: 0;
+}
+
+.m4__image {
+  width: 250px;
+  height: 250px;
+  border-radius: 8px;
+  object-fit: cover;
+  background: var(--color-neutral-200, #ebebeb);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--color-neutral-400, #bcbcbc);
+  font-size: 14px;
+  font-family: Lato, sans-serif;
+}
