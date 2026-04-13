@@ -1,4 +1,5 @@
-import React, { useState, useRef, useEffect, KeyboardEvent } from 'react'
+import React, { useState, useRef, useEffect } from 'react'
+import type { KeyboardEvent } from 'react'
 import './DropdownSelector.css'
 
 // ─── Types ────────────────────────────────────────────────────────────────────

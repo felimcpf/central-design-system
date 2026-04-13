@@ -1,0 +1,49 @@
+# .github/workflows/publish.yml
+#
+# Publishes the design system to GitHub Packages whenever you push a version tag.
+#
+# How to trigger a release:
+#   git tag v1.0.0
+#   git push --tags
+#
+# The package becomes available at:
+#   npm install @felimcpf/central-design-system
+#   (with the .npmrc config pointing to https://npm.pkg.github.com)
+
+name: Publish to GitHub Packages
+
+on:
+  push:
+    tags:
+      - 'v*'   # triggers on any tag like v1.0.0, v1.2.3, etc.
+
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+      packages: write   # required to publish to GitHub Packages
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+          registry-url: 'https://npm.pkg.github.com'
+          scope: '@felimcpf'
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Build library
+        run: npm run build
+        # Produces: dist/index.js, dist/index.d.ts, dist/style.css
+
+      - name: Publish to GitHub Packages
+        run: npm publish
+        env:
+          NODE_AUTH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          # GITHUB_TOKEN is automatically provided by GitHub Actions — no manual secret needed.

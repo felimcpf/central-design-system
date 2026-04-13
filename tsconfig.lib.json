@@ -1,0 +1,25 @@
+{
+  // TypeScript config used ONLY for the library build (npm run build).
+  // Key differences from tsconfig.app.json:
+  //   - Excludes story files (they are dev-only, not part of the published package)
+  //   - Turns off noUnusedLocals/noUnusedParameters (stories have import patterns
+  //     that trigger these; source files have legacy React imports from before
+  //     the automatic JSX transform)
+  //   - Removes allowImportingTsExtensions so vite-plugin-dts can emit .d.ts files
+  "extends": "./tsconfig.app.json",
+  "compilerOptions": {
+    "allowImportingTsExtensions": false,
+    "noUnusedLocals": false,
+    "noUnusedParameters": false
+  },
+  "include": ["src"],
+  "exclude": [
+    "src/main.tsx",
+    "src/App.tsx",
+    "src/App.css",
+    "src/**/*.stories.tsx",
+    "src/**/*.stories.ts",
+    "src/**/*.test.tsx",
+    "src/**/*.test.ts"
+  ]
+}
